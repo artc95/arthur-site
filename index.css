@@ -1,0 +1,167 @@
+/*ENSURE PADDING DO NOT ADD TO THE WIDTH*/
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --maincolor:#ffd9d7 /*pastelred*/;
+    --subcolor:#d5f5d5 /*pastelgreen*/;
+    --fontcolor: white;
+    --fontfamily:"Brush Script MT";
+}
+
+body {
+    background-color: var(--maincolor);
+}
+
+.logo{
+    border-radius: 50%;
+    width:250px;
+    height:250px;
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+}
+
+.hero img{
+    width:100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    border-radius:20%
+}
+
+h1 {
+    color: var(--fontcolor);
+    font-family: var(--fontfamily);
+    text-align: center;
+    font-size: 100px;
+}
+
+h2 {
+    color: #89cff0;
+    font-family:'Italianno', cursive;
+    text-align: center;
+    font-size: 40px;
+}
+
+a{
+    color: var(--subcolor);
+    text-decoration: none;
+    font-family: var(--fontfamily);
+    text-align: center;
+    font-size: 40px;
+}
+
+.chinese{
+    font-family:'Long Cang', cursive;
+}
+
+/*NAVIGATION BAR*/
+ul {
+    /*removes the bullet points*/
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /*sets the nav items side by side*/
+    display: flex;
+    background-color: var(--maincolor);
+    vertical-align: middle;
+    font-family:var(--fontfamily);
+}
+
+ul li {
+    /*set the spacing ratio for each nav item*/
+    flex: 1;
+    vertical-align: middle;
+}
+
+ul li a {
+    /*set the links to be a box*/
+    display: block;
+    /*remove the underline from the link*/
+    text-decoration: none;
+    text-align: center;
+    color: var(--fontcolor);
+    font-size: 88px;
+    /*create a fade over effect*/
+    transition: all 0.3s;
+    line-height: 250px;
+}
+
+ul li a:hover {
+    background-color: var(--subcolor);
+    border-radius:50%;
+}
+
+/*ROWS WITH COLUMNS*/
+.row {
+    display: flex;
+}
+
+.col {
+    flex:1;
+    padding:20px;
+}
+
+.col img {
+    width: 100%;
+    border-radius:20%;
+}
+
+.container {
+    flex:1;
+    position: relative;
+    width: 50%;
+    padding: 20px;
+}
+
+/* IMAGE WITH TEXT OVERLAY */
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius:20%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20%;
+  /*height: 100%;*/
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--subcolor);
+    padding:20px;
+}
+
+.container:hover .overlay {
+  opacity: 0.9;
+    padding:20px;
+}
+
+.text {
+    color: grey;
+    font-family:'Italianno', cursive;
+    font-size: 40px;
+  position: absolute;
+    opacity:1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* FOOTER */
+footer{
+    color: var(--fontcolor);
+    font-family: var(--fontfamily);
+    text-align: center;
+    font-size: 28px;
+}
